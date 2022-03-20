@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-import { nanoid } from "nanoid";
 import "./App.css";
 
 function Questions(props) {
