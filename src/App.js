@@ -27,10 +27,14 @@ function App() {
 
   function startQuiz() {
     setQuizStarted(true);
+  }
+
+  function reset() {
     setScore((score) => {
       return { ...score, points: 0, showResults: false };
     });
     setAllAnswered(false);
+    setQuizStarted(false);
   }
 
   function selectAnswer(id) {
@@ -113,7 +117,7 @@ function App() {
               {" "}
               You scored {score.points} / {questions.length} correct answers
             </h2>
-            <button className="play-btn" onClick={startQuiz}>
+            <button className="play-btn" onClick={reset}>
               Play Again
             </button>
           </div>
